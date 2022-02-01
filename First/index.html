@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Angualr Tutorial</title>
+  </head>
+  <body>
+    <h1>Expressions and Interpolation</h1>
+    <div ng-controller="myCtrl">
+      Original Message: {{sayMessage()}} <br />
+      Loves Message: {{sayLovesMessage()}} <br />
+      Truth {{sayLovesMessage() | truth : "to the gym" : "alone"}} <br />
+      BIG TRUTH: {{sayLovesMessage() | truth : "to the gym" : "alone" |
+      uppercase}}
+      <div>
+        <button ng-click="changeNinja()">Change Color Ninja</button>
+        <br />
+        <img ng-src="img/ninja_{{stateOfBeing}}.png" />
+      </div>
+    </div>
+  </body>
+</html>
